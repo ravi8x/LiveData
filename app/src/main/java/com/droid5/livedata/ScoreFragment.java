@@ -1,10 +1,12 @@
 package com.droid5.livedata;
 
 import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,7 @@ public class ScoreFragment extends Fragment {
     @BindView(R.id.tv_score)
     TextView txtScore;
 
-    private ScoreCard scoreCard;
+    private ScoreCardViewModel viewModel;
 
     public ScoreFragment() {
         // Required empty public constructor
@@ -38,13 +40,16 @@ public class ScoreFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_score, container, false);
         ButterKnife.bind(this, view);
 
-        scoreCard = new ScoreCard();
-        scoreCard.getScore().observe(this, new Observer<Integer>() {
+        // Providing context is more important here
+        // `this` won't sync the data across all fragments
+        // `getActivity()` - sync the data across all fragments
+
+        viewModel = ViewModelProviders.of(getActivity()).get(ScoreCardViewModel.class);
+
+        viewModel.getScoreCard().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@Nullable Integer integer) {
-                // on Device rotation, score will be reset to zero
-                // as ViewModel is not used to retain state
-                txtScore.setText(integer.toString());
+                txtScore.setText(String.valueOf(integer));
             }
         });
 
@@ -54,6 +59,6 @@ public class ScoreFragment extends Fragment {
     @OnClick(R.id.container)
     public void onViewTapped() {
         // increment the score on fragment tap
-        scoreCard.incrementScore();
+        viewModel.incrementScore();
     }
 }
