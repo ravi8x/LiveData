@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#6539ba</color>
+    <color name="colorPrimaryDark">#6539ba</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="color1">#4bd4fd</color>
+    <color name="color2">#fb5b43</color>
+    <color name="color3">#eb3b8c</color>
+    <color name="color4">#ffdd00</color>
+
+    <array name="colors">
+        <item>@color/color1</item>
+        <item>@color/color2</item>
+        <item>@color/color3</item>
+        <item>@color/color4</item>
+    </array>
 </resources>
