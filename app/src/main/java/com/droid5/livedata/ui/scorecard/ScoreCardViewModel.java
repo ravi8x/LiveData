@@ -1,4 +1,4 @@
-package com.droid5.livedata;
+package com.droid5.livedata.ui.scorecard;
 
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;

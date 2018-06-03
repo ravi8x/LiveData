@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context=".ScoreCardActivity"
+    tools:showIn="@layout/activity_score_card">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,15 +17,14 @@
 
         <fragment
             android:id="@+id/fragment1"
-            class="com.droid5.livedata.ScoreFragment"
+            class="com.droid5.livedata.ui.scorecard.ScoreCardFragment"
             android:layout_width="match_parent"
-            android:background="#ff0"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <fragment
             android:id="@+id/fragment2"
-            class="com.droid5.livedata.ScoreFragment"
+            class="com.droid5.livedata.ui.scorecard.ScoreCardFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -39,14 +38,14 @@
 
         <fragment
             android:id="@+id/fragment3"
-            class="com.droid5.livedata.ScoreFragment"
+            class="com.droid5.livedata.ui.scorecard.ScoreCardFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <fragment
             android:id="@+id/fragment4"
-            class="com.droid5.livedata.ScoreFragment"
+            class="com.droid5.livedata.ui.scorecard.ScoreCardFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />

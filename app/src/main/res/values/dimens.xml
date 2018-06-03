@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_height">350dp</dimen>
+    <dimen name="profile_image_margin_left">30dp</dimen>
+    <dimen name="profile_image_margin_bottom">30dp</dimen>
+    <dimen name="profile_image_width">60dp</dimen>
+    <dimen name="user_name">16dp</dimen>
+    <dimen name="user_location">12dp</dimen>
+    <dimen name="name_margin_top">8dp</dimen>
 </resources>
