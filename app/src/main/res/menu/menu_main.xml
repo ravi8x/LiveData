@@ -7,4 +7,10 @@
         android:orderInCategory="100"
         android:title="@string/action_shared_fragments"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_transforms_fragments"
+        android:orderInCategory="100"
+        android:title="@string/action_transform_fragments"
+        app:showAsAction="never" />
 </menu>

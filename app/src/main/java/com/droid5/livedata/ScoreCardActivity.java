@@ -25,6 +25,7 @@ public class ScoreCardActivity extends AppCompatActivity {
 
     /**
      * Applying random background color to four fragments
+     * to differentiate them on the screen
      */
     private void applyFragmentBackgroundColors() {
         int[] rainbow = getResources().getIntArray(R.array.colors);

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transform"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    tools:context=".ui.transform.TransformFragment">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#111"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/full_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#222"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/desc_transformations" />
+
+    <Button
+        android:id="@+id/btn_update_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Address" />
+
+</LinearLayout>

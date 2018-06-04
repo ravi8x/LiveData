@@ -3,7 +3,6 @@ package com.droid5.livedata.ui.profile;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
-import android.util.Log;
 
 import com.droid5.livedata.model.User;
 
@@ -27,13 +26,14 @@ public class ProfileViewModel extends ViewModel {
         u.setEmail("ravi@androidhive.info");
 
         List<String> phoneNumbers = new ArrayList<>();
-        phoneNumbers.add("99939494949");
+        phoneNumbers.add("81796378889");
         phoneNumbers.add("93223949322");
         phoneNumbers.add("WhatsApp");
-        phoneNumbers.add("Send Message");
-        u.setPhoneNumbers(phoneNumbers);
+        phoneNumbers.add("Send SMS");
+        phoneNumbers.add("Tweet");
+        u.setCallActions(phoneNumbers);
 
-        u.setLocation("India");
+        u.setCountry("India");
         u.setProfileImageUrl("https://avatars3.githubusercontent.com/u/497670?s=460&v=4");
         u.setProfileCoverImage("http://hdqwalls.com/wallpapers/material-design-dark-red-black-ap.jpg");
 

@@ -1,8 +1,5 @@
 package com.droid5.livedata.model;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-
 import java.util.List;
 
 public class User {
@@ -10,8 +7,13 @@ public class User {
     String email;
     String profileImageUrl;
     String profileCoverImage;
-    List<String> phoneNumbers;
-    String location;
+    List<String> callActions;
+    String city;
+    String country;
+    String streetAddress;
+    String pinCode;
+    String primaryMobile;
+    String secondaryMobile;
 
     public User() {
     }
@@ -48,19 +50,59 @@ public class User {
         this.profileCoverImage = profileCoverImage;
     }
 
-    public List<String> getPhoneNumbers() {
-        return phoneNumbers;
+    public List<String> getCallActions() {
+        return callActions;
     }
 
-    public void setPhoneNumbers(List<String> phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
+    public void setCallActions(List<String> callActions) {
+        this.callActions = callActions;
     }
 
-    public String getLocation() {
-        return location;
+    public String getCountry() {
+        return country;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getPinCode() {
+        return pinCode;
+    }
+
+    public void setPinCode(String pinCode) {
+        this.pinCode = pinCode;
+    }
+
+    public String getPrimaryMobile() {
+        return primaryMobile;
+    }
+
+    public void setPrimaryMobile(String primaryMobile) {
+        this.primaryMobile = primaryMobile;
+    }
+
+    public String getSecondaryMobile() {
+        return secondaryMobile;
+    }
+
+    public void setSecondaryMobile(String secondaryMobile) {
+        this.secondaryMobile = secondaryMobile;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

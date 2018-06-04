@@ -33,10 +33,12 @@ public class ProfileActivity extends AppCompatActivity {
     @BindView(R.id.name)
     TextView name;
 
-    @BindView(R.id.location)
+    @BindView(R.id.country)
     TextView location;
 
     private ProfileViewModel mViewModel;
+
+    // TODO - AppBar can be maintained with a separate ViewModel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         Glide.with(this).load(user.getProfileCoverImage()).into(backdrop);
         Glide.with(this).load(user.getProfileImageUrl()).apply(RequestOptions.circleCropTransform()).into(profileImage);
         name.setText(user.getName());
-        location.setText(user.getLocation());
+        location.setText(user.getCountry());
     }
 
     @Override
@@ -83,6 +85,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.action_shared_fragments) {
             startActivity(new Intent(ProfileActivity.this, ScoreCardActivity.class));
+            return true;
+        }
+
+        if (item.getItemId() == R.id.action_transforms_fragments) {
+            startActivity(new Intent(ProfileActivity.this, TransformActivity.class));
             return true;
         }
 

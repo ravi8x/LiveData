@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.droid5.livedata">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,11 +13,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ScoreCardActivity"
-            android:label="@string/app_name"
+            android:label="@string/activity_shared_data"
             android:parentActivityName=".ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ProfileActivity"
             android:label="@string/app_name"
@@ -28,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TransformActivity"
+            android:label="@string/activity_transform"
+            android:parentActivityName=".ProfileActivity"></activity>
     </application>
 
 </manifest>

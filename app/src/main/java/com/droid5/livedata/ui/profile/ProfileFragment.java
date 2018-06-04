@@ -1,15 +1,12 @@
 package com.droid5.livedata.ui.profile;
 
-import android.arch.core.util.Function;
-import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -20,8 +17,8 @@ import android.widget.TextView;
 
 import com.droid5.livedata.R;
 import com.droid5.livedata.model.User;
+import com.droid5.livedata.utils.MyDividerItemDecoration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -58,16 +55,16 @@ public class ProfileFragment extends Fragment {
         mViewModel.getUser().observe(this, new Observer<User>() {
             @Override
             public void onChanged(@Nullable User user) {
-                Log.e(TAG, "Name: " + user.getName());
-                Log.e(TAG, "Email: " + user.getEmail());
-                // Log.d(TAG, "Phones: " + user.getPhoneNumbers().);
-                mAdapter.setData(user.getPhoneNumbers());
+                Log.d(TAG, "Name: " + user.getName());
+                Log.d(TAG, "Email: " + user.getEmail());
+                mAdapter.setData(user.getCallActions());
             }
         });
 
         mAdapter = new CallActionsAdapter();
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.addItemDecoration(new MyDividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, 46));
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -75,7 +72,8 @@ public class ProfileFragment extends Fragment {
 
         private List<String> actions;
 
-        public CallActionsAdapter(){}
+        public CallActionsAdapter() {
+        }
 
         public class MyViewHolder extends RecyclerView.ViewHolder {
 
